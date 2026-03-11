@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { environment } from '../environments/environment.development';
 
 @Component({
   selector: 'app-root',
@@ -10,3 +11,5 @@ import { RouterOutlet } from '@angular/router';
 export class App {
   protected readonly title = signal('idp');
 }
+
+console.log("Chave API:", environment.API_KEY)
