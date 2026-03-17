@@ -37,7 +37,7 @@ jobs:
       - name: Generate environment.ts
         run: |
           mkdir -p src/environments
-          cat > src/environments/environment.ts <<EOF
+          cat > src/environments/environment.development.ts <<EOF
           export const environment = {
             production: true,
             apiUrl: '${API_URL}'
@@ -48,4 +48,4 @@ jobs:
         run: npm run lint
 
       - name: Executar build
-        run: npm run build -- --configuration production
+        run: npm run build
