@@ -34,6 +34,15 @@ jobs:
       - name: Instalar dependências
         run: npm ci
 
+      - name: Gerar environment.prod.ts
+        run: |
+          cat > src/environments/environment.prod.ts <<EOF
+          export const environment = {
+            production: true,
+            apiUrl: '${API_URL}'
+          };
+          EOF
+
       - name: Executar lint
         run: npm run lint
 
