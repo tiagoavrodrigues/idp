@@ -34,8 +34,9 @@ jobs:
       - name: Instalar dependências
         run: npm ci
 
-      - name: Gerar environment.prod.ts
+      - name: Generate environment.ts
         run: |
+          mkdir -p src/environments
           cat > src/environments/environment.ts <<EOF
           export const environment = {
             production: true,
