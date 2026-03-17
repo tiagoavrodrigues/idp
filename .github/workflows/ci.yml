@@ -4,6 +4,7 @@ on:
   pull_request:
     branches:
       - main
+      - feature/ci-pipeline
   workflow_dispatch:
 
 jobs:
